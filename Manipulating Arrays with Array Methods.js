@@ -1,11 +1,8 @@
+//TEMPLATE LITERALS
+
 let engGreet = 'Hello';
 let turGreet = 'Selam';
 let porGreet = 'Ola';
-
-let count = ['one','two','three','four'];
-let counting = count.join('-');
-
-console.log(counting);
 
 let engMessage = `${engGreet}, how are you?`;
 let turMessage = `${turGreet}, nasilsiniz?`;
@@ -29,16 +26,17 @@ console.log(engMessage);
 console.log(turMessage);
 console.log(porMessage);
 
+// FOREACH, MAP & FILTER METHODS
 const stars = ['Sirius', 'Vega', 'Rigel', 'Polaris'];
 
-// stars.forEach((star, index) => {
-//     console.log(star, index)
-// });
+stars.forEach((star, index) => {
+    console.log(star, index)
+});
 
-// const brightStars = stars.map((star) => {
-//     return star+' is very bright!';
-// });
-// console.log(brightStars);
+const brightStars = stars.map((star) => {
+    return star+' is very bright!';
+});
+console.log(brightStars);
 
 const evenStars = stars.filter((star, index) => {
     return index % 2 === 0;
@@ -46,12 +44,14 @@ const evenStars = stars.filter((star, index) => {
 
 console.log('Even Indexed Stars are: ', evenStars);
 
+// REDUCE METHOD
 const numbers = [1, 2, 3, 4, 5];
 const sum = numbers.reduce((total, number) => {
     return total + number;
 }, 0);
 console.log(sum); // prints total sum of numbers
 
+// FIND METHOD
 const firstEvenItem = numbers.find((num) => {
     return num%2 === 0;
 });
